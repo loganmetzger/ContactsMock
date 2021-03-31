@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/etPhone"
+        app:layout_constraintEnd_toStartOf="@id/glright"
+        app:layout_constraintStart_toStartOf="@+id/glleft"
+        app:layout_constraintTop_toTopOf="@+id/gltop">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Name"
+            android:padding="10dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/person_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/etName"
+        app:layout_constraintEnd_toEndOf="@id/etName"
+        app:layout_constraintEnd_toStartOf="@id/glleft"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gltop"
+        app:tint="@android:color/darker_gray" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glright"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gltop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glcenright"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".65" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glleft"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".17" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etPhone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toTopOf="@id/etAddress"
+        app:layout_constraintEnd_toStartOf="@id/glcenright"
+        app:layout_constraintStart_toEndOf="@id/glleft"
+        app:layout_constraintTop_toBottomOf="@id/etName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Phone"
+            android:padding="10dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imagePhone"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/image_phone"
+        app:layout_constraintBottom_toBottomOf="@id/etPhone"
+        app:layout_constraintEnd_toStartOf="@id/glleft"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etPhone"
+        app:tint="@android:color/darker_gray" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etArea"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:ellipsize="end"
+        app:endIconDrawable="@drawable/ic_dropdown_arrow"
+        app:endIconMode="custom"
+        app:layout_constraintBottom_toBottomOf="@id/etPhone"
+        app:layout_constraintEnd_toStartOf="@id/glright"
+        app:layout_constraintStart_toEndOf="@id/glcenright"
+        app:layout_constraintTop_toBottomOf="@id/etName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Area"
+            android:padding="10dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etAddress"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toTopOf="@id/etCity"
+        app:layout_constraintEnd_toStartOf="@id/glright"
+        app:layout_constraintStart_toEndOf="@id/glleft"
+        app:layout_constraintTop_toBottomOf="@id/etPhone">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Address"
+            android:padding="10dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageLocation"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_location"
+        app:layout_constraintBottom_toBottomOf="@id/etAddress"
+        app:layout_constraintEnd_toStartOf="@id/etAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etAddress"
+        app:tint="@android:color/darker_gray" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etCity"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toTopOf="@id/etState"
+        app:layout_constraintEnd_toStartOf="@id/glright"
+        app:layout_constraintStart_toEndOf="@id/glleft"
+        app:layout_constraintTop_toBottomOf="@id/etAddress">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="City"
+            android:padding="10dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etState"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toTopOf="@id/etEmail"
+        app:layout_constraintEnd_toStartOf="@id/glmid"
+        app:layout_constraintStart_toEndOf="@id/glleft"
+        app:layout_constraintTop_toBottomOf="@id/etCity">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="State"
+            android:padding="10dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etZip"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/etState"
+        app:layout_constraintEnd_toStartOf="@id/glright"
+        app:layout_constraintStart_toEndOf="@id/glmid"
+        app:layout_constraintTop_toBottomOf="@id/etCity">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Zip Code"
+            android:padding="10dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glmid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".56" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etEmail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toTopOf="@id/etBirthday"
+        app:layout_constraintEnd_toStartOf="@id/glright"
+        app:layout_constraintStart_toEndOf="@id/glleft"
+        app:layout_constraintTop_toBottomOf="@id/etState">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Email"
+            android:padding="10dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageEmail"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_email"
+        app:layout_constraintBottom_toBottomOf="@id/etEmail"
+        app:layout_constraintEnd_toStartOf="@id/etEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etEmail"
+        app:tint="@android:color/darker_gray" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etBirthday"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/glright"
+        app:layout_constraintStart_toEndOf="@id/glleft"
+        app:layout_constraintTop_toBottomOf="@id/etEmail">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Birthday"
+            android:padding="10dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageBirthday"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_cake"
+        app:layout_constraintBottom_toBottomOf="@id/etBirthday"
+        app:layout_constraintEnd_toStartOf="@id/etBirthday"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etBirthday"
+        app:tint="@android:color/darker_gray" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
